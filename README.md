@@ -26,6 +26,7 @@ Follow these steps to set up and run the Movie OTT application on your local mac
 The Movie OTT provides the following RESTful endpoints for managing movies:
 
 1. **GET /movies**: Retrieves all movies stored in the database.
+
 Sample Example
 req: http://localhost:3000/movies/
 res: [
@@ -46,6 +47,7 @@ res: [
         "__v": 0
     }]
 2. **GET /movies/search?q={query}**: Searches for movies based on the provided query string (title or genre).
+
 Sample Example
 req: http://localhost:3000/movies/search?q=Horror
 res : [
@@ -58,6 +60,7 @@ res : [
         "__v": 0
     }]
 3. **POST /movies**: Adds a new movie to the database. Requires admin privileges.
+
 Sample Example
 req: http://localhost:3000/movies' 
     header 'role: admin'    
@@ -76,6 +79,7 @@ res: {
     "__v": 0
 }
 4. **PUT /movies/:id**: Updates an existing movie with the provided ID. Requires admin privileges.
+
 Sample Example
 req: http://localhost:3000/movies/6661a8979e45a877b9ec18a2' 
     header 'role: admin'    
@@ -91,6 +95,7 @@ res: {
     "__v": 0
 }
 5. **DELETE /movies/:id**: Removes a movie from the database by its ID. Requires admin privileges.
+
 Sample Example
 req: http://localhost:3000/movies/6661a8979e45a877b9ec18a2' 
     header 'role: admin'    
