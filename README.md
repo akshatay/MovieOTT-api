@@ -28,7 +28,9 @@ The Movie OTT provides the following RESTful endpoints for managing movies:
 1. **GET /movies**: Retrieves all movies stored in the database.
 
 Sample Example
+
 req: http://localhost:3000/movies/
+
 res: [
     {
         "_id": "6661916269a7f3dde7c5c5e7",
@@ -46,10 +48,13 @@ res: [
         "streamingLink": "www.youtube.com",
         "__v": 0
     }]
+
 2. **GET /movies/search?q={query}**: Searches for movies based on the provided query string (title or genre).
 
-Sample Example
+Sample Example : 
+
 req: http://localhost:3000/movies/search?q=Horror
+
 res : [
     {
         "_id": "6661916269a7f3dde7c5c5e7",
@@ -59,9 +64,11 @@ res : [
         "streamingLink": "www.youtube.com",
         "__v": 0
     }]
+
 3. **POST /movies**: Adds a new movie to the database. Requires admin privileges.
 
-Sample Example
+Sample Example :
+
 req: http://localhost:3000/movies' 
     header 'role: admin'    
     data {
@@ -70,6 +77,7 @@ req: http://localhost:3000/movies'
     "rating":3,
     "streamingLink":"www.youtube.com"
     }  
+    
 res: {
     "title": "Sample Movie",
     "genre": "Thriller",
@@ -78,14 +86,17 @@ res: {
     "_id": "6661a8979e45a877b9ec18a2",
     "__v": 0
 }
+
 4. **PUT /movies/:id**: Updates an existing movie with the provided ID. Requires admin privileges.
 
 Sample Example
+
 req: http://localhost:3000/movies/6661a8979e45a877b9ec18a2' 
     header 'role: admin'    
     data {
     "genre":"Action"
     }  
+
 res: {
     "title": "Sample Movie",
     "genre": "Action",
@@ -94,10 +105,13 @@ res: {
     "_id": "6661a8979e45a877b9ec18a2",
     "__v": 0
 }
+
 5. **DELETE /movies/:id**: Removes a movie from the database by its ID. Requires admin privileges.
 
 Sample Example
+
 req: http://localhost:3000/movies/6661a8979e45a877b9ec18a2' 
-    header 'role: admin'    
+    header 'role: admin' 
+
 res: 204
 
